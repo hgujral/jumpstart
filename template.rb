@@ -269,7 +269,7 @@ after_bundle do
 
   # config the app to use postgres
   remove_file 'config/database.yml'
-  template 'database.erb', 'config/database.yml
+  template 'database.erb', 'config/database.yml'
 
   # Migrate
   rails_command "db:create"
