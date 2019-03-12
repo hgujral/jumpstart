@@ -267,6 +267,10 @@ after_bundle do
   add_whenever
   add_sitemap
 
+  # config the app to use postgres
+  remove_file 'config/database.yml'
+  template 'database.erb', 'config/database.yml
+
   # Migrate
   rails_command "db:create"
   rails_command "db:migrate"
